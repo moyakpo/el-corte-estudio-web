@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700&display=swap");
 
 :root {
-  --bg: #f3efe6;
-  --ink: #1f1814;
-  --accent: #c94f2d;
-  --accent-2: #8f2a11;
-  --paper: #fffaf2;
-  --line: #d9ccb6;
+  --bg: #dcebcf;
+  --ink: #171d35;
+  --accent: #00d9e7;
+  --accent-2: #f5be2a;
+  --paper: #1c2240;
+  --line: #3a446f;
+  --hot: #f10088;
 }
 
 * {
@@ -24,8 +25,11 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 88% 10%, #d6c9b4 0%, transparent 36%),
-    radial-gradient(circle at 10% 78%, #e2d4c0 0%, transparent 40%), var(--bg);
+    linear-gradient(rgba(220, 235, 207, 0.72), rgba(220, 235, 207, 0.84)),
+    radial-gradient(circle at 88% 10%, rgba(0, 217, 231, 0.2) 0%, transparent 38%),
+    radial-gradient(circle at 10% 78%, rgba(241, 0, 136, 0.12) 0%, transparent 42%),
+    url("https://images.unsplash.com/photo-1571330735066-03aaa9429d89?auto=format&fit=crop&w=1900&q=80")
+      center / cover fixed no-repeat;
 }
 
 .site {
@@ -39,15 +43,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background:
-    linear-gradient(125deg, rgba(22, 16, 14, 0.8), rgba(26, 11, 8, 0.35)),
-    repeating-linear-gradient(
-      -35deg,
-      rgba(201, 79, 45, 0.16) 0,
-      rgba(201, 79, 45, 0.16) 3px,
-      rgba(0, 0, 0, 0) 3px,
-      rgba(0, 0, 0, 0) 12px
-    );
-  color: #fff8ef;
+    linear-gradient(125deg, rgba(13, 18, 41, 0.9), rgba(28, 34, 64, 0.68)),
+    radial-gradient(circle at 78% 15%, rgba(241, 0, 136, 0.25), transparent 34%),
+    url("https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1900&q=80")
+      center / cover no-repeat;
+  color: #f5f8ff;
 }
 
 .topbar {
@@ -67,7 +67,7 @@ body {
 .topbar a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 248, 239, 0.45);
+  border-bottom: 1px solid rgba(245, 248, 255, 0.52);
 }
 
 .hero-content {
@@ -128,7 +128,7 @@ h2 {
 }
 
 .btn-solid {
-  color: #fff;
+  color: #161a2e;
   background-color: var(--accent);
 }
 
@@ -137,8 +137,8 @@ h2 {
 }
 
 .btn-ghost {
-  color: #fff8ef;
-  border: 1px solid rgba(255, 248, 239, 0.6);
+  color: #f5f8ff;
+  border: 1px solid rgba(245, 248, 255, 0.65);
 }
 
 main {
@@ -164,7 +164,8 @@ section {
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 1rem;
-  box-shadow: 0 8px 25px rgba(46, 29, 17, 0.08);
+  box-shadow: 0 10px 28px rgba(11, 15, 31, 0.32);
+  color: #eaf0ff;
 }
 
 .card h3 {
@@ -180,8 +181,11 @@ section {
 
 .showcase {
   border-radius: 20px;
-  background: linear-gradient(95deg, #1a120f, #311b13);
-  color: #fff7ed;
+  background:
+    linear-gradient(95deg, #1a2040, #2a3361),
+    url("https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=80")
+      center / cover no-repeat;
+  color: #f8fbff;
   padding: 1.7rem;
   text-align: center;
 }
@@ -193,6 +197,15 @@ section {
 
 .contact {
   text-align: center;
+}
+
+.contact .btn-solid {
+  background-color: var(--hot);
+  color: #fff;
+}
+
+.contact .btn-solid:hover {
+  background-color: #c60070;
 }
 
 .reveal {
